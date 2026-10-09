@@ -35,7 +35,7 @@
 
 /* 1. 全局背景图片及自适应配置 */
 body {
-  background-image: url('https://main.ssss.nyc.mn/background.webp'); /* 替换为你的图片 https 链接，或本地路径如 /bg.jpg（放 public 目录下） */
+  background-image: url('https://bing.liushen.fun/api/random'); /* 替换为你的图片 https 链接，或本地路径如 /bg.jpg（放 public 目录下） */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
