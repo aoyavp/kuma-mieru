@@ -35,7 +35,7 @@
 
 /* 强制为网页主体添加背景图并平铺铺满 */
 html,body {
-  background-image: url('https://你的图床地址/bg.jpg');
+  background-image: url('https://main.ssss.nyc.mn/background.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
