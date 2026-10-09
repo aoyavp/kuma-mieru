@@ -33,20 +33,23 @@
   display: none; /* Chrome / Safari / Edge */
 }
 
-/* 强制为网页主体添加背景图并平铺铺满 */
-html, body {
-  background-image: url('https://main.ssss.nyc.mn/background.webp');
+/* 1. 全局背景图片及自适应配置 */
+body {
+  background-image: url('https://main.ssss.nyc.mn/background.webp'); /* 替换为你的图片 https 链接，或本地路径如 /bg.jpg（放 public 目录下） */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /* 固定背景，不随滚动条滚动 */
+  min-height: 100vh;
 }
 
-/* 亮色模式下的遮罩（可自行调整） */
-body > div {
-  background-color: rgba(255, 255, 255, 0.35);
+/* 2. 页面外壳半透明，让背景图透出来（外壳不加模糊，避免整屏模糊的性能开销） */
+:root {
+  --shell-bg: rgba(255, 255, 255, 0.35); /* 亮色模式 */
 }
-/* 暗色模式下的遮罩 */
-.dark body > div {
-  background-color: rgba(13, 17, 23, 0.45);
+.dark {
+  --shell-bg: rgba(13, 17, 23, 0.45); /* 暗色模式 */
+}
+body > div {
+  background-color: var(--shell-bg);
 }
