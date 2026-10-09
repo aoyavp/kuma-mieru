@@ -76,7 +76,7 @@ function ControlButton({ isPaused, onClick }: ControlButtonProps) {
   );
 }
 
-export default function AutoRefresh({ onRefresh, interval = 60000, children }: AutoRefreshProps) {
+export default function AutoRefresh({ onRefresh, interval = 300000, children }: AutoRefreshProps) {
   const t = useTranslations('timer');
   const format = useFormatter();
 
